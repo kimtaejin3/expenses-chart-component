@@ -1,0 +1,44 @@
+.Main{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.l_row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.l_col{
+    flex-basis:0;
+    flex-grow:1;
+}
+
+.Spending-graph{
+    height: 150px;
+    position: relative;
+}
+
+.Spending-graph-height{
+    position: absolute;
+    bottom:0;
+    border-radius: 7px;
+    background-color: hsl(10, 79%, 65%);
+    width:100%;
+}
+
+.l_col .day{
+    text-align: center;
+}
+

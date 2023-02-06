@@ -2,6 +2,7 @@
     background-color: hsl(10, 79%, 65%);
     width: 500px;
     border-radius: 15px;
+    margin-bottom:20px;
 }
 
 .Header-inside{
@@ -12,9 +13,9 @@
 }
 
 .Header-title{
-    color: hsl(27, 66%, 92%);
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 .Header-title-spending{

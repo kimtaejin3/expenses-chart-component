@@ -4,4 +4,6 @@ body{
     align-items: center;
     height: 100vh;
     flex-direction: column;
+
+    background-color: hsl(27, 66%, 92%);
 }

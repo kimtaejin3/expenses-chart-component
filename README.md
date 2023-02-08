@@ -2,6 +2,11 @@
 
 This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+## 배울만한 것들
+- REACT prop
+- state hook isn't used for this project.
+- react app hosting
+
 ## Table of contents
 
 -   [Overview](#overview)

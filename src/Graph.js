@@ -1,8 +1,17 @@
 import {useState} from 'react';
 
-function Graph({day, amount}){
+function Graph({day, amount, height}){
     const className = `Spending-graph`;
-    const graph_height = `${amount}%`;
+    console.log(height,typeof(height));
+    let classNameSub = 'Spending-graph-height';
+
+    if(height=='80.0'){
+        classNameSub += ' high';
+    }
+    
+
+    const graph_height = height+'%';
+    console.log(graph_height);
 
     let [showAmount, setShowAmount] = useState(false);
     const mouseEventHandler = () => {
@@ -15,7 +24,7 @@ function Graph({day, amount}){
             <div className="Spending-graph">
                     {showAmount && <span className="spending-graph-amount">${amount}</span>}
 
-                    <div onMouseOver={mouseEventHandler} onMouseLeave={mouseEventHandler} className="Spending-graph-height" style={{height:graph_height}} >
+                    <div onMouseOver={mouseEventHandler} onMouseLeave={mouseEventHandler} className={classNameSub} style={{height:graph_height}} >
                     </div>
             </div>
         </>

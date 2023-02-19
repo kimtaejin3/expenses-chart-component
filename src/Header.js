@@ -1,6 +1,4 @@
 import './Header.css';
-import './layout.css';
-import './component.css';
 import logoImg from '../images/logo.svg';
 
 function Header(){

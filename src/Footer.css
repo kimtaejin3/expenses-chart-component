@@ -1,0 +1,46 @@
+/* 
+  <div className="Footer">
+            <div className="container">
+                <div className="container-contetns">
+                    <span>Total this month</span>
+                    <span>{sum}</span>
+                </div>
+                <div className="container-side">
+                    <span>+2.4%</span>
+                    <span>from last month</span>
+                </div>
+            </div>
+        </div>
+*/
+
+.Footer{
+    border-top: 3px solid #eaeaea;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.Footer .container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.Footer .container-contetns{
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer .container-side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Footer .total__price{
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.Footer .rate{
+    font-weight: bold;
+}

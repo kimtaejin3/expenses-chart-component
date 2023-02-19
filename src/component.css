@@ -1,9 +1,11 @@
 body{
+    background-color: hsl(27, 66%, 92%);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column;
+}
 
-    background-color: hsl(27, 66%, 92%);
+.wrapper{
+    width: 480px;
 }

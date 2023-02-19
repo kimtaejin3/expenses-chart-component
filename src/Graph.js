@@ -2,16 +2,12 @@ import {useState} from 'react';
 
 function Graph({day, amount, height}){
     const className = `Spending-graph`;
-    console.log(height,typeof(height));
     let classNameSub = 'Spending-graph-height';
 
     if(height=='80.0'){
         classNameSub += ' high';
     }
-    
-
     const graph_height = height+'%';
-    console.log(graph_height);
 
     let [showAmount, setShowAmount] = useState(false);
     const mouseEventHandler = () => {

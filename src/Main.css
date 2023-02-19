@@ -2,6 +2,7 @@
     background-color: white;
     border-radius: 20px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 ul{
@@ -15,7 +16,6 @@ li{
 
 .l_row{
     display: flex;
-    flex-wrap: wrap;
     gap:10px;
 }
 
@@ -27,6 +27,7 @@ li{
 .Spending-graph{
     height: 200px;
     display: flex;
+    row-gap: 10px;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -57,9 +58,8 @@ li{
     color: white;
     font-weight: bold;
     font-size:11px;
-    margin-bottom: 5px;
     padding: 10px 8px;
     text-align: center;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 

@@ -1,6 +1,7 @@
 import spending from '../data.json';
 import './Main.css';
 import Graph from './Graph.js';
+import Footer from './Footer.js';
 
 
 function compare(a,b){
@@ -90,6 +91,7 @@ function Main(){
                     <li className='l_col'><div class="day">sun</div></li>
                 </ul>
             </div>
+            <Footer/>
         </main>
     );
 

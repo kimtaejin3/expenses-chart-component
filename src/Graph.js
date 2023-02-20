@@ -1,7 +1,6 @@
 import {useState} from 'react';
 
-function Graph({day, amount, height}){
-    const className = `Spending-graph`;
+function Graph({amount, height}){
     let classNameSub = 'Spending-graph-height';
 
     if(height=='80.0'){

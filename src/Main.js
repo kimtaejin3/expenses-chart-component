@@ -4,19 +4,17 @@ import Graph from './Graph.js';
 import Footer from './Footer.js';
 
 
-function compare(a,b){
-    if(a.amount < b.amount){
-        return -1;
+function sumOfArray(arr){
+    let sum = 0;
+    for(let i=0; i<arr.length; i++){
+        sum += parseFloat(arr[i].amount);
     }
-    if(a.amount>b.amount){
-        return 1;
-    }
-    return 0;
+    return sum;
 }
 
 const arrayOfSpending = spending;
 let copy_arrayOfSpending = arrayOfSpending.slice();
-let max_element = copy_arrayOfSpending.sort(compare)[6];
+let max_element = copy_arrayOfSpending.sort((a,b)=>a.amount-b.amount)[6];
 let result_arr = new Array(7);
 
 copy_arrayOfSpending.forEach((x)=>{
@@ -41,15 +39,9 @@ copy_arrayOfSpending.forEach((x)=>{
     result_arr[index]=(x.amount*80 /max_element.amount).toFixed(1);
 });
 
-console.log(result_arr);
+const sum = sumOfArray(arrayOfSpending);
 
 
-// 제일 큰 값을 100으로 설정하고 나머지는 그 값에 따라서 비율적으로
-/*
-300:20 = 100:x
-300x = 2000
-6%
-*/
 function Main(){
 // json 파일에서 배열 가져와서 
     return (
@@ -59,25 +51,25 @@ function Main(){
                 <ul className="l_row">
                     
                     <li className="l_col" >
-                        <Graph day={arrayOfSpending[0].day}  amount={arrayOfSpending[0].amount} height = {result_arr[0]}/>
+                        <Graph amount={arrayOfSpending[0].amount} height = {result_arr[0]}/>
                     </li>
                     <li className="l_col" >
-                        <Graph  day={arrayOfSpending[1].day}  amount={arrayOfSpending[1].amount} height={result_arr[1]}/>
+                        <Graph  amount={arrayOfSpending[1].amount} height={result_arr[1]}/>
                     </li>
                     <li className="l_col" >
-                        <Graph  day={arrayOfSpending[2].day}  amount={arrayOfSpending[2].amount} height={result_arr[2]}/>
+                        <Graph  amount={arrayOfSpending[2].amount} height={result_arr[2]}/>
                     </li>
                     <li className="l_col">
-                        <Graph  day={arrayOfSpending[3].day}  amount={arrayOfSpending[3].amount} height={result_arr[3]}/>
+                        <Graph amount={arrayOfSpending[3].amount} height={result_arr[3]}/>
                     </li>
                     <li className="l_col" >
-                        <Graph  day={arrayOfSpending[4].day}  amount={arrayOfSpending[4].amount} height={result_arr[4]}/>
+                        <Graph amount={arrayOfSpending[4].amount} height={result_arr[4]}/>
                     </li>
                     <li className="l_col" >
-                        <Graph  day={arrayOfSpending[5].day}  amount={arrayOfSpending[5].amount} height={result_arr[5]}/>
+                        <Graph amount={arrayOfSpending[5].amount} height={result_arr[5]}/>
                     </li>
                     <li className="l_col" >
-                        <Graph  day={arrayOfSpending[6].day}  amount={arrayOfSpending[6].amount} height={result_arr[6]}/>
+                        <Graph amount={arrayOfSpending[6].amount} height={result_arr[6]}/>
                     </li>
                 </ul>
 
@@ -91,7 +83,7 @@ function Main(){
                     <li className='l_col'><div class="day">sun</div></li>
                 </ul>
             </div>
-            <Footer/>
+            <Footer sum={sum}/>
         </main>
     );
 

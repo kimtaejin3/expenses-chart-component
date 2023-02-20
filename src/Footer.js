@@ -1,13 +1,8 @@
-import './Footer.css';
 import spending from '../data.json';
 
-let arr = spending;
-let sum = 0;
-for(let i=0; i<arr.length; i++){
-    sum += arr[i].amount;
-}
 
-function Footer(){
+
+function Footer({sum}){
     return (
         <div className="Footer">
             <div className="container">

@@ -63,3 +63,35 @@ li{
     /* border-radius: 5px; */
 }
 
+
+.Footer{
+    border-top: 3px solid #eaeaea;
+    padding-top: 20px;
+    margin: 20px 0;
+}
+
+.Footer .container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.Footer .container-contetns{
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer .container-side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Footer .total__price{
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.Footer .rate{
+    font-weight: bold;
+}
